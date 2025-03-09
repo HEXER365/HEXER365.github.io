@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Status</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      flex-direction: column;
+    }
+
+    /* Glass Theme Container */
+    .glass-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    /* Heading Styling */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* Message Styling */
+    .message {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    /* Blinking Effect */
+    .blink {
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% {
+        opacity: 1;
+      }
+      25%, 75% {
+        opacity: 0.5;
+      }
+    }
+
+    /* Button Styling */
+    .contact-button {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Footer Styling */
+    .footer-box {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .footer-box a {
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-box a:hover {
+      opacity: 0.7;
+    }
+
+    /* Developer Contact Details */
+    #details {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #details p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-container">
+    <h1>Subscription Status</h1>
+    <p class="message blink">
+      It appears your subscription has expired or the usage limit has been exceeded. Please contact your configuration provider to renew or purchase a new subscription.
+    </p>
+    <button class="contact-button" onclick="alert('Contact support at support@example.com')">Contact Provider</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-box">
+    Made With ❤️ <a href="https://t.me/H3X4R" target="_blank">𝙃𝙀𝙓𝙀𝙍™</a> | All rights reserved | Copyright © 2025.
+  </div>
+
+  <!-- Developer Contact Details -->
+  <div id="details">
+    <p>Contact us for support or inquiries:</p>
+    <div class="social-icons">
+      <a href="https://t.me/H3X4R" target="_blank" title="Telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://github.com/HEXER365" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com/HEXER365" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:pay.hexer@proton.me" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Optional: Add JavaScript for additional interactivity
+    const message = document.querySelector('.message');
+    setInterval(() => {
+      message.classList.toggle('blink');
+    }, 1500);
+  </script>
+</body>
+</html>
